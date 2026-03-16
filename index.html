@@ -187,7 +187,7 @@
         }
 
         .btn-eliminar {
-            background: #dc3545;
+            background: var(--danger);
             color: white;
             border: none;
             padding: 8px 14px;
@@ -290,8 +290,8 @@
     <div class="subtitle">Código: CG-RE-004 | Versión: 2</div>
 
     <div class="logo-preview">
-        <img id="logoPreview" src="/logo.png.jpg" alt="Logo" />
-        <div class="hint">Vista previa del logo cargado desde Netlify</div>
+        <img id="logoPreview" src="./logo.png.jpg" alt="Logo" />
+        <div class="hint">Vista previa del logo cargado desde GitHub Pages</div>
     </div>
 
     <div id="estadoBaseDatos" class="estado-cargando">⏳ Cargando base de datos de implantes...</div>
@@ -430,7 +430,7 @@
         });
     }
 
-    cargarLogoBase64("/logo.png.jpg")
+    cargarLogoBase64("./logo.png.jpg")
         .then(base64 => {
             logoBase64_PDF = base64;
             console.log("Logo cargado correctamente.");
@@ -487,7 +487,7 @@
         return texto.replace(/^invima\s*:\s*/i, "").trim();
     }
 
-    Papa.parse("/inventario.csv", {
+    Papa.parse("./inventario.csv", {
         download: true,
         header: true,
         skipEmptyLines: true,
@@ -517,7 +517,7 @@
         },
         error: function(err) {
             estadoDiv.className = "estado-error";
-            estadoDiv.innerHTML = `❌ Error: No se encontró o no se pudo leer /inventario.csv`;
+            estadoDiv.innerHTML = `❌ Error: No se encontró o no se pudo leer ./inventario.csv`;
             console.error("Error leyendo CSV:", err);
         }
     });
@@ -716,7 +716,7 @@
 
         if (!logoBase64_PDF) {
             try {
-                logoBase64_PDF = await cargarLogoBase64("/logo.png.jpg");
+                logoBase64_PDF = await cargarLogoBase64("./logo.png.jpg");
             } catch (error) {
                 console.warn("PDF sin logo:", error.message);
             }
@@ -739,19 +739,14 @@
             doc.setDrawColor(0, 68, 129);
             doc.setLineWidth(0.6);
 
-            // Cuadro general del encabezado
             doc.rect(10, 8, 190, 24);
-
-            // Separaciones internas
             doc.line(55, 8, 55, 32);
             doc.line(145, 8, 145, 32);
 
-            // Logo
             if (logoBase64_PDF) {
                 doc.addImage(logoBase64_PDF, "PNG", 14, 11, 36, 16);
             }
 
-            // Título
             doc.setFont("helvetica", "bold");
             doc.setFontSize(13);
             doc.setTextColor(0, 68, 129);
@@ -760,9 +755,7 @@
             doc.setFont("helvetica", "normal");
             doc.setFontSize(8.5);
             doc.setTextColor(50, 50, 50);
-            doc.text("Meraky Soluciones a la Medida", 100, 24, { align: "center" });
-
-            // Datos derecha
+           
             doc.setFont("helvetica", "bold");
             doc.setFontSize(8);
             doc.setTextColor(0, 0, 0);
@@ -783,7 +776,7 @@
             doc.setFont("helvetica", "normal");
             doc.setFontSize(8);
             doc.setTextColor(90, 90, 90);
-            doc.text("Meraky Soluciones a la Medida", 10, 289);
+         
             doc.text(`Página ${paginaActual} de ${totalPaginas}`, 195, 289, { align: "right" });
         }
 
@@ -913,7 +906,6 @@
         doc.setTextColor(0, 68, 129);
         doc.text("FIRMAS", 14, finalY);
 
-        // Firma cirujano
         if (!esCanvasVacio(canvasCirujano, ctxCirujano)) {
             doc.addImage(canvasCirujano.toDataURL("image/png"), "PNG", 20, finalY + 4, 65, 24);
         }
@@ -925,7 +917,6 @@
         doc.setFont("helvetica", "normal");
         doc.text("Firma del Cirujano", 52.5, finalY + 40, { align: "center" });
 
-        // Firma soporte
         if (!esCanvasVacio(canvasSoporte, ctxSoporte)) {
             doc.addImage(canvasSoporte.toDataURL("image/png"), "PNG", 120, finalY + 4, 65, 24);
         }
