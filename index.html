@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja Triple Implante - CG-RE-004</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #004481;
+            --secondary-color: #f4f7f6;
+            --text-color: #333;
+            --border-color: #ccc;
+            --danger: #dc3545;
+            --success: #28a745;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            color: var(--text-color);
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .logo-preview {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-preview img {
+            max-width: 220px;
+            max-height: 90px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+        }
+
+        .hint {
+            font-size: 0.82rem;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        fieldset {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: var(--secondary-color);
+        }
+
+        legend {
+            font-weight: bold;
+            color: var(--primary-color);
+            background: white;
+            padding: 0 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cfcfcf;
+            border-radius: 6px;
+            font-size: 0.95em;
+            min-width: 0;
+            background: white;
+        }
+
+        .form-group input[readonly] {
+            background: #f1f3f5;
+            color: #444;
+        }
+
+        .dispositivo-item {
+            background-color: white;
+            padding: 18px;
+            border: 1px solid #b8daff;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .dispositivo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .dispositivo-header h4 {
+            margin: 0;
+            color: #004481;
+            font-size: 1.1rem;
+        }
+
+        .material-grid-top {
+            display: grid;
+            grid-template-columns: 1.1fr 1.6fr 1fr;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .material-grid-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .btn-principal {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--success);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-secundario {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-eliminar {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .firmas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .firma-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        canvas {
+            border: 2px dashed #004481;
+            border-radius: 8px;
+            background-color: #fff;
+            cursor: crosshair;
+            touch-action: none;
+            width: 100%;
+            max-width: 320px;
+            height: 150px;
+        }
+
+        .btn-limpiar-firma {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 4px;
+            margin-top: 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+
+        #estadoBaseDatos {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .estado-cargando {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .estado-ok {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .estado-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid,
+            .material-grid-top,
+            .material-grid-bottom,
+            .firmas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dispositivo-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-eliminar {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<datalist id="catalogo-datalist"></datalist>
+
+<div class="container">
+    <h1>HOJA TRIPLE IMPLANTE</h1>
+    <div class="subtitle">Código: CG-RE-004 | Versión: 2</div>
+
+    <div class="logo-preview">
+        <img id="logoPreview" src="/logo.png.jpg" alt="Logo" />
+        <div class="hint">Vista previa del logo cargado desde Netlify</div>
+    </div>
+
+    <div id="estadoBaseDatos" class="estado-cargando">⏳ Cargando base de datos de implantes...</div>
+
+    <form id="formularioImplante">
+        <fieldset>
+            <legend>Información General</legend>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Fecha de Cirugía:</label>
+                    <input type="date" id="fecha" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Hora de inicio de cirugía:</label>
+                    <input type="time" id="horaCx" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Hora de finalización de cirugía:</label>
+                    <input type="time" id="horaFin" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Soporte Quirúrgico (Inst.):</label>
+                    <input type="text" id="soporte" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Cirujano:</label>
+                    <input type="text" id="cirujano" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Cliente:</label>
+                    <input type="text" id="cliente" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Institución:</label>
+                    <input type="text" id="institucion" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Solicitante:</label>
+                    <input type="text" id="solicitante" />
+                </div>
+
+                <div class="form-group">
+                    <label>Ciudad:</label>
+                    <input type="text" id="ciudad" required />
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos del Paciente</legend>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Paciente:</label>
+                    <input type="text" id="paciente" required />
+                </div>
+
+                <div class="form-group">
+                    <label>ID (Documento):</label>
+                    <input type="text" id="idPaciente" required />
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label>Procedimiento:</label>
+                    <input type="text" id="procedimiento" required />
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Materiales</legend>
+            <div id="listaDispositivos"></div>
+            <button type="button" id="btnAgregarDispositivo" class="btn-secundario">+ Añadir otro material</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Firmas Digitales</legend>
+            <div class="firmas-grid">
+                <div class="firma-container">
+                    <label>Firma Soporte Quirúrgico</label>
+                    <canvas id="padSoporte" width="320" height="150"></canvas>
+                    <button type="button" class="btn-limpiar-firma" onclick="limpiarFirma(ctxSoporte, canvasSoporte)">Limpiar Firma Soporte</button>
+                </div>
+
+                <div class="firma-container">
+                    <label>Firma Cirujano</label>
+                    <canvas id="padCirujano" width="320" height="150"></canvas>
+                    <button type="button" class="btn-limpiar-firma" onclick="limpiarFirma(ctxCirujano, canvasCirujano)">Limpiar Firma Cirujano</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn-principal">Generar y Descargar Hoja Triple Implante</button>
+    </form>
+</div>
+
+<script>
+    let logoBase64_PDF = "";
+    let catalogo = [];
+    let contadorMateriales = 0;
+
+    const datalist = document.getElementById("catalogo-datalist");
+    const estadoDiv = document.getElementById("estadoBaseDatos");
+    const listaDispositivos = document.getElementById("listaDispositivos");
+    const btnAgregarDispositivo = document.getElementById("btnAgregarDispositivo");
+
+    async function cargarLogoBase64(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+
+            img.onload = function () {
+                try {
+                    const canvas = document.createElement("canvas");
+                    canvas.width = img.naturalWidth;
+                    canvas.height = img.naturalHeight;
+                    const ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0);
+                    resolve(canvas.toDataURL("image/png"));
+                } catch (err) {
+                    reject(new Error("No se pudo convertir el logo a base64."));
+                }
+            };
+
+            img.onerror = function () {
+                reject(new Error("No se pudo cargar el logo en: " + url));
+            };
+
+            img.src = url;
+        });
+    }
+
+    cargarLogoBase64("/logo.png.jpg")
+        .then(base64 => {
+            logoBase64_PDF = base64;
+            console.log("Logo cargado correctamente.");
+        })
+        .catch(error => {
+            console.warn(error.message);
+        });
+
+    function normalizarTexto(texto) {
+        return String(texto || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim()
+            .toUpperCase();
+    }
+
+    function obtenerValorFlexible(obj, posiblesClaves) {
+        if (!obj || typeof obj !== "object") return "";
+
+        const clavesObjeto = Object.keys(obj);
+
+        for (const clave of clavesObjeto) {
+            const claveNorm = normalizarTexto(clave);
+            for (const posible of posiblesClaves) {
+                if (claveNorm === normalizarTexto(posible)) {
+                    return obj[clave] ?? "";
+                }
+            }
+        }
+
+        return "";
+    }
+
+    function extraerReferencia(item) {
+        return obtenerValorFlexible(item, [
+            "REFERENCIA", "REF", "CODIGO", "CÓDIGO", "SKU", "PRODUCTO", "ITEM"
+        ]);
+    }
+
+    function extraerDescripcion(item) {
+        return obtenerValorFlexible(item, [
+            "DESCRIPCION", "DESCRIPCIÓN", "NOMBRE", "PRODUCTO", "DETALLE"
+        ]);
+    }
+
+    function extraerInvima(item) {
+        return obtenerValorFlexible(item, [
+            "INVIMA", "REGISTRO INVIMA", "REGISTRO", "SANITARIO"
+        ]);
+    }
+
+    function limpiarInvima(valor) {
+        const texto = String(valor || "").trim();
+        return texto.replace(/^invima\s*:\s*/i, "").trim();
+    }
+
+    Papa.parse("/inventario.csv", {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+            const data = Array.isArray(results.data) ? results.data : [];
+
+            catalogo = data.filter(item => {
+                return normalizarTexto(extraerReferencia(item)) !== "";
+            });
+
+            datalist.innerHTML = "";
+
+            catalogo.forEach(item => {
+                const ref = extraerReferencia(item);
+                const desc = extraerDescripcion(item);
+
+                if (ref) {
+                    const option = document.createElement("option");
+                    option.value = ref;
+                    option.label = desc || ref;
+                    datalist.appendChild(option);
+                }
+            });
+
+            estadoDiv.className = "estado-ok";
+            estadoDiv.innerHTML = `✅ Base de datos cargada: ${catalogo.length} referencias disponibles.`;
+        },
+        error: function(err) {
+            estadoDiv.className = "estado-error";
+            estadoDiv.innerHTML = `❌ Error: No se encontró o no se pudo leer /inventario.csv`;
+            console.error("Error leyendo CSV:", err);
+        }
+    });
+
+    function crearBloqueMaterial() {
+        contadorMateriales++;
+
+        const div = document.createElement("div");
+        div.className = "dispositivo-item";
+
+        div.innerHTML = `
+            <div class="dispositivo-header">
+                <h4>Material ${contadorMateriales}</h4>
+                <button type="button" class="btn-eliminar">Eliminar</button>
+            </div>
+
+            <div class="material-grid-top">
+                <div class="form-group">
+                    <label>Referencia</label>
+                    <input
+                        type="text"
+                        list="catalogo-datalist"
+                        class="input-ref"
+                        placeholder="Ej: 187178-OT"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <input type="text" class="input-desc" readonly required />
+                </div>
+
+                <div class="form-group">
+                    <label>Invima</label>
+                    <input type="text" class="input-invima" readonly required />
+                </div>
+            </div>
+
+            <div class="material-grid-bottom">
+                <div class="form-group">
+                    <label>Lote</label>
+                    <input type="text" class="input-lote" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input type="number" class="input-cantidad" min="1" value="1" required />
+                </div>
+            </div>
+        `;
+
+        const btnEliminar = div.querySelector(".btn-eliminar");
+        const inputRef = div.querySelector(".input-ref");
+
+        btnEliminar.addEventListener("click", () => {
+            div.remove();
+            renumerarMateriales();
+        });
+
+        inputRef.addEventListener("input", function () {
+            autocompletarFila(this);
+        });
+
+        inputRef.addEventListener("change", function () {
+            autocompletarFila(this);
+        });
+
+        listaDispositivos.appendChild(div);
+    }
+
+    function renumerarMateriales() {
+        const items = document.querySelectorAll(".dispositivo-item");
+        items.forEach((item, index) => {
+            const h4 = item.querySelector("h4");
+            if (h4) h4.textContent = `Material ${index + 1}`;
+        });
+        contadorMateriales = items.length;
+    }
+
+    function autocompletarFila(inputRefElement) {
+        const row = inputRefElement.closest(".dispositivo-item");
+        if (!row) return;
+
+        const inputDesc = row.querySelector(".input-desc");
+        const inputInvima = row.querySelector(".input-invima");
+        const valorBuscado = normalizarTexto(inputRefElement.value);
+
+        if (!valorBuscado) {
+            inputDesc.value = "";
+            inputInvima.value = "";
+            return;
+        }
+
+        const encontrado = catalogo.find(item => {
+            const ref = normalizarTexto(extraerReferencia(item));
+            return ref === valorBuscado;
+        });
+
+        if (encontrado) {
+            inputDesc.value = extraerDescripcion(encontrado) || "";
+            inputInvima.value = limpiarInvima(extraerInvima(encontrado)) || "2025DM-0031031";
+        } else {
+            inputDesc.value = "";
+            inputInvima.value = "2025DM-0031031";
+        }
+    }
+
+    btnAgregarDispositivo.addEventListener("click", crearBloqueMaterial);
+    crearBloqueMaterial();
+
+    function setupCanvas(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d");
+        let pintando = false;
+
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "#000080";
+
+        const getPos = (evt) => {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+
+            const clientX = evt.touches && evt.touches.length > 0 ? evt.touches[0].clientX : evt.clientX;
+            const clientY = evt.touches && evt.touches.length > 0 ? evt.touches[0].clientY : evt.clientY;
+
+            return {
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
+            };
+        };
+
+        const iniciar = (e) => {
+            e.preventDefault();
+            pintando = true;
+            const p = getPos(e);
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+        };
+
+        const dibujar = (e) => {
+            e.preventDefault();
+            if (!pintando) return;
+            const p = getPos(e);
+            ctx.lineTo(p.x, p.y);
+            ctx.stroke();
+        };
+
+        const detener = () => {
+            pintando = false;
+        };
+
+        canvas.addEventListener("mousedown", iniciar);
+        canvas.addEventListener("mousemove", dibujar);
+        canvas.addEventListener("mouseup", detener);
+        canvas.addEventListener("mouseout", detener);
+
+        canvas.addEventListener("touchstart", iniciar, { passive: false });
+        canvas.addEventListener("touchmove", dibujar, { passive: false });
+        canvas.addEventListener("touchend", detener);
+
+        return { canvas, ctx };
+    }
+
+    const padSoporte = setupCanvas("padSoporte");
+    const canvasSoporte = padSoporte.canvas;
+    const ctxSoporte = padSoporte.ctx;
+
+    const padCirujano = setupCanvas("padCirujano");
+    const canvasCirujano = padCirujano.canvas;
+    const ctxCirujano = padCirujano.ctx;
+
+    window.limpiarFirma = function(ctx, canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
+    function esCanvasVacio(canvas, ctx) {
+        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        return !data.some(c => c !== 0);
+    }
+
+    function formatearFecha(fechaISO) {
+        if (!fechaISO) return "";
+        const partes = fechaISO.split("-");
+        if (partes.length !== 3) return fechaISO;
+        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    }
+
+    document.getElementById("formularioImplante").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "mm", "a4");
+
+        if (!logoBase64_PDF) {
+            try {
+                logoBase64_PDF = await cargarLogoBase64("/logo.png.jpg");
+            } catch (error) {
+                console.warn("PDF sin logo:", error.message);
+            }
+        }
+
+        const fecha = document.getElementById("fecha").value || "";
+        const horaInicio = document.getElementById("horaCx").value || "";
+        const horaFin = document.getElementById("horaFin").value || "";
+        const soporte = document.getElementById("soporte").value || "";
+        const cirujano = document.getElementById("cirujano").value || "";
+        const cliente = document.getElementById("cliente").value || "";
+        const institucion = document.getElementById("institucion").value || "";
+        const solicitante = document.getElementById("solicitante").value || "";
+        const ciudad = document.getElementById("ciudad").value || "";
+        const paciente = document.getElementById("paciente").value || "";
+        const idPaciente = document.getElementById("idPaciente").value || "";
+        const procedimiento = document.getElementById("procedimiento").value || "";
+
+        function dibujarHeader() {
+            doc.setDrawColor(0, 68, 129);
+            doc.setLineWidth(0.6);
+
+            // Cuadro general del encabezado
+            doc.rect(10, 8, 190, 24);
+
+            // Separaciones internas
+            doc.line(55, 8, 55, 32);
+            doc.line(145, 8, 145, 32);
+
+            // Logo
+            if (logoBase64_PDF) {
+                doc.addImage(logoBase64_PDF, "PNG", 14, 11, 36, 16);
+            }
+
+            // Título
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(13);
+            doc.setTextColor(0, 68, 129);
+            doc.text("HOJA TRIPLE IMPLANTE", 100, 18, { align: "center" });
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(8.5);
+            doc.setTextColor(50, 50, 50);
+            doc.text("Meraky Soluciones a la Medida", 100, 24, { align: "center" });
+
+            // Datos derecha
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(8);
+            doc.setTextColor(0, 0, 0);
+            doc.text("Fecha de actualización:", 148, 14);
+            doc.text("Código:", 148, 20);
+            doc.text("Versión:", 148, 26);
+
+            doc.setFont("helvetica", "normal");
+            doc.text("14/03/2026", 195, 14, { align: "right" });
+            doc.text("CG-RE-004", 195, 20, { align: "right" });
+            doc.text("2", 195, 26, { align: "right" });
+        }
+
+        function dibujarFooter(paginaActual, totalPaginas) {
+            doc.setDrawColor(180, 180, 180);
+            doc.line(10, 285, 200, 285);
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(8);
+            doc.setTextColor(90, 90, 90);
+            doc.text("Meraky Soluciones a la Medida", 10, 289);
+            doc.text(`Página ${paginaActual} de ${totalPaginas}`, 195, 289, { align: "right" });
+        }
+
+        dibujarHeader();
+
+        const filasInfo = [
+            [
+                { content: "Fecha:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: formatearFecha(fecha), styles: { fontStyle: "bold" } },
+                { content: "Paciente:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: paciente, styles: { fontStyle: "bold" } }
+            ],
+            [
+                { content: "Hora inicio:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: horaInicio, styles: { fontStyle: "bold" } },
+                { content: "Hora finalización:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: horaFin, styles: { fontStyle: "bold" } }
+            ],
+            [
+                { content: "ID:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: idPaciente, styles: { fontStyle: "bold" } },
+                { content: "Cirujano:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: cirujano, styles: { fontStyle: "bold" } }
+            ],
+            [
+                { content: "Nombre del soporte:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: soporte, styles: { fontStyle: "bold" } },
+                { content: "Solicitante:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: solicitante, styles: { fontStyle: "bold" } }
+            ],
+            [
+                { content: "Cliente:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: cliente, styles: { fontStyle: "normal" } },
+                { content: "Institución:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: institucion, styles: { fontStyle: "normal" } }
+            ],
+            [
+                { content: "Ciudad:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: ciudad, styles: { fontStyle: "normal" } },
+                { content: "Procedimiento:", styles: { fontStyle: "bold", fillColor: [230, 240, 248] } },
+                { content: procedimiento, styles: { fontStyle: "bold" } }
+            ]
+        ];
+
+        doc.autoTable({
+            startY: 38,
+            theme: "grid",
+            styles: {
+                fontSize: 8.5,
+                cellPadding: 2.5,
+                lineColor: [160, 160, 160],
+                lineWidth: 0.2,
+                textColor: [40, 40, 40],
+                overflow: "linebreak",
+                valign: "middle"
+            },
+            columnStyles: {
+                0: { cellWidth: 32 },
+                1: { cellWidth: 63 },
+                2: { cellWidth: 32 },
+                3: { cellWidth: 63 }
+            },
+            body: filasInfo,
+            margin: { left: 10, right: 10 }
+        });
+
+        const filasMateriales = [];
+        document.querySelectorAll(".dispositivo-item").forEach((item, i) => {
+            filasMateriales.push([
+                String(i + 1),
+                item.querySelector(".input-ref").value || "",
+                item.querySelector(".input-desc").value || "",
+                item.querySelector(".input-invima").value || "",
+                item.querySelector(".input-lote").value || "",
+                item.querySelector(".input-cantidad").value || ""
+            ]);
+        });
+
+        doc.autoTable({
+            startY: doc.lastAutoTable.finalY + 6,
+            theme: "grid",
+            headStyles: {
+                fillColor: [0, 68, 129],
+                textColor: 255,
+                fontSize: 8,
+                fontStyle: "bold",
+                halign: "center",
+                valign: "middle"
+            },
+            styles: {
+                fontSize: 8,
+                cellPadding: 2.2,
+                lineColor: [160, 160, 160],
+                lineWidth: 0.2,
+                overflow: "linebreak",
+                valign: "middle"
+            },
+            alternateRowStyles: {
+                fillColor: [247, 250, 252]
+            },
+            columnStyles: {
+                0: { cellWidth: 10, halign: "center" },
+                1: { cellWidth: 28 },
+                2: { cellWidth: 70 },
+                3: { cellWidth: 35 },
+                4: { cellWidth: 25 },
+                5: { cellWidth: 18, halign: "center" }
+            },
+            head: [["#", "REFERENCIA", "DESCRIPCIÓN", "INVIMA", "LOTE", "CANT."]],
+            body: filasMateriales,
+            margin: { top: 38, bottom: 30, left: 10, right: 10 },
+            didDrawPage: function () {
+                dibujarHeader();
+            }
+        });
+
+        let finalY = doc.lastAutoTable.finalY + 16;
+
+        if (finalY > 220) {
+            doc.addPage();
+            dibujarHeader();
+            finalY = 55;
+        }
+
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(10);
+        doc.setTextColor(0, 68, 129);
+        doc.text("FIRMAS", 14, finalY);
+
+        // Firma cirujano
+        if (!esCanvasVacio(canvasCirujano, ctxCirujano)) {
+            doc.addImage(canvasCirujano.toDataURL("image/png"), "PNG", 20, finalY + 4, 65, 24);
+        }
+        doc.line(20, finalY + 30, 85, finalY + 30);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(9);
+        doc.setTextColor(0, 0, 0);
+        doc.text(cirujano || "Nombre del cirujano", 52.5, finalY + 35, { align: "center" });
+        doc.setFont("helvetica", "normal");
+        doc.text("Firma del Cirujano", 52.5, finalY + 40, { align: "center" });
+
+        // Firma soporte
+        if (!esCanvasVacio(canvasSoporte, ctxSoporte)) {
+            doc.addImage(canvasSoporte.toDataURL("image/png"), "PNG", 120, finalY + 4, 65, 24);
+        }
+        doc.line(120, finalY + 30, 185, finalY + 30);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(9);
+        doc.text(soporte || "Nombre del soporte", 152.5, finalY + 35, { align: "center" });
+        doc.setFont("helvetica", "normal");
+        doc.text("Firma del Soporte Quirúrgico", 152.5, finalY + 40, { align: "center" });
+
+        const totalPages = doc.internal.getNumberOfPages();
+        for (let i = 1; i <= totalPages; i++) {
+            doc.setPage(i);
+            dibujarFooter(i, totalPages);
+        }
+
+        const nombrePaciente = paciente || "Paciente";
+        doc.save(`Hoja_Triple_Implante_${nombrePaciente.replace(/\s+/g, "_")}.pdf`);
+    });
+</script>
+
+</body>
+</html>

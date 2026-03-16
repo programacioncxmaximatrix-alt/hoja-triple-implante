@@ -1,0 +1,293 @@
+REFERENCIA;DESCRIPCION;INVIMA
+187174-RT;2.0-Mini Placa Recta de 4 Orificios  s/p;Invima:2025DM-0031031
+187176-RT;2.0-Mini Placa Recta de 6 Orificios  s/p;Invima:2025DM-0031031
+187178-RT;2.0-Mini Placa Recta de 8 Orificios  s/p;Invima:2025DM-0031031
+1871710-RT;2.0-Mini Placa Recta de 10 Orificios  s/p;Invima:2025DM-0031031
+1871712-RT;2.0-Mini Placa Recta de 12 Orificios  s/p;Invima:2025DM-0031031
+1871716-RT;2.0-Mini Placa Recta de 16 Orificios  s/p;Invima:2025DM-0031031
+187174-RP6T;2.0-Mini Placa Recta de 4 Orificios  Puente Corto;Invima:2025DM-0031031
+187174-RP9T;2.0-Mini Placa Recta de 4 Orificios  Puente Medio;Invima:2025DM-0031031
+187174-RP12T;2.0-Mini Placa Recta de 4 Orificios  Puente Largo;Invima:2025DM-0031031
+187176-RP6T;2.0-Mini Placa Recta de 6 Orificios  Puente Corto;Invima:2025DM-0031031
+187176-RP12T;2.0-Mini Placa Recta de 6 Orificios  Puente Largo;Invima:2025DM-0031031
+187176-OT;2.0-Mini Placa Curva Orbital de 6 Orificios ;Invima:2025DM-0031031
+187178-OT;2.0-Mini Placa Curva Orbital de 8 Orificios ;Invima:2025DM-0031031
+1871710-OT;2.0-Mini Placa Curva Orbital de 10 Orificios  ;Invima:2025DM-0031031
+187164-OPT;2.0-Mini Placa Curva Orbital de 4 Orificios con puente;Invima:2025DM-0031031
+187166-OPT;2.0-Mini Placa Curva Orbital de 6 Orificios con puente;Invima:2025DM-0031031
+187168-OPT;2.0-Mini Placa Curva Orbital de 8 Orificios con puente;Invima:2025DM-0031031
+187175-YT;2.0-Mini Placa en Y de 5 Orificios  S/P;Invima:2025DM-0031031
+187175-YP6T;2.0-Mini Placa en Y de 5 Orificios  Puente Corto;Invima:2025DM-0031031
+187175-YP8T;2.0-Mini Placa en Y de 5 Orificios  Puente Medio;Invima:2025DM-0031031
+187175-YP12T;2.0-Mini Placa en Y de 5 Orificios  Puente Largo;Invima:2025DM-0031031
+187176-YDBT;2.0-Mini Placa doble Y de 6 Orificios  s/p;Invima:2025DM-0031031
+187176-YDBP6T;2.0-Mini Placa doble Y de 6 Orificios  Puente Corto;Invima:2025DM-0031031
+187176-YDBP8T;2.0-Mini Placa doble Y de 6 Orificios  Puente Medio;Invima:2025DM-0031031
+187176-YDBP12T;2.0-Mini Placa doble Y de 6 Orificios  Puente Largo;Invima:2025DM-0031031
+187177-YDBT;2.0-Mini Placa doble Y de 7 Orificios  s/p;Invima:2025DM-0031031
+187176-TT;2.0-Mini Placa en T de 6 Orificios  s/p;Invima:2025DM-0031031
+187175-TP8T;2.0-Mini Placa en T de 5 Orificios  Puente Medio;Invima:2025DM-0031031
+187175-TP12T;2.0-Mini Placa en T de 5 Orificios  Puente Largo;Invima:2025DM-0031031
+187176-TDBT;2.0-Mini Placa doble T de 6 Orificios;Invima:2025DM-0031031
+187174-LIT;2.0-Mini Placa en L de 4 Orificios s/p Izquierda;Invima:2025DM-0031031
+187174-LDT;2.0-Mini Placa en L de 4 Orificios s/p Derecha;Invima:2025DM-0031031
+187174-LIP8T;2.0-Mini Placa en L de 4 Orificios Puente Corto Izquierda;Invima:2025DM-0031031
+187174-LDP8T;2.0-Mini Placa en L de 4 Orificios Puente Corto Derecha;Invima:2025DM-0031031
+187174-LIP10T;2.0-Mini Placa en L de 4 Orificios Puente Medio Izquierda;Invima:2025DM-0031031
+187174-LDP10T;2.0-Mini Placa en L de 4 Orificios Puente Medio  Derecha;Invima:2025DM-0031031
+187174-LIP12T;2.0-Mini Placa en L de 4 Orificios Puente Largo Izquierda;Invima:2025DM-0031031
+187174-LDP12T;2.0-Mini Placa en L de 4 Orificios Puente Largo Derecha;Invima:2025DM-0031031
+187175-LIP12T;2.0-Mini Placa en L de 5 Orificios Puente Largo Izquierda;Invima:2025DM-0031031
+187175-LDP12T;2.0-Mini Placa en L de 5 Orificios Puente Largo Derecha;Invima:2025DM-0031031
+187174-LI110T;2.0-Mini Placa en L de 4 Orificios S/P Izquierda-110§;Invima:2025DM-0031031
+187174-LI110T;2.0-Mini Placa en L de 4 Orificios S/P Derecha-110§;Invima:2025DM-0031031
+187174-LIPC110T;2.0-Mini Placa en  L de 4 Orif. Pte Corto Izq oblicua-110§;Invima:2025DM-0031031
+187174-LDPC110T;2.0-Mini Placa en  L de 4 Orif. Pte Corto Der oblicua-110§;Invima:2025DM-0031031
+187174-LIPM110T;2.0-Mini Placa en  L de 4 Orif. Pte Medio Izq oblicua-110§;Invima:2025DM-0031031
+187174-LDPM110T;2.0-Mini Placa en  L de 4 Orif. Pte Medio Der oblicua-110§;Invima:2025DM-0031031
+187174-LIPL110T;2.0-Mini Placa en  L de 4 Orif. Pte Largo Izq oblicua-110§;Invima:2025DM-0031031
+187174-LDPL110T;2.0-Miniplaca en  L de 4 Orif. Pte Largo Der oblicua-110§;Invima:2025DM-0031031
+187174-CUAT;2.0-Mini Placa Cuadrada de 4 Orificios;Invima:2025DM-0031031
+;;Invima:2025DM-0031031
+187176-CUAT;2.0-Mini Placa Cuadrada de 6 Orificios;Invima:2025DM-0031031
+187178-CUAT;2.0-Mini Placa Cuadrada de 8 Orificios;Invima:2025DM-0031031
+1871712-CUAT;2.0-Mini Placa Cuadrada de 12 Orificios;Invima:2025DM-0031031
+1871716-CUAT;2.0-Mini Placa Cuadrada de 16 Orificios;Invima:2025DM-0031031
+1871718-CUAT;2.0-Mini Placa Cuadrada de 18 Orificios;Invima:2025DM-0031031
+1871724-CUAT;2.0-Mini Placa Cuadrada de 24 Orificios;Invima:2025DM-0031031
+187177-HT;2.0-Mini Placa en H  de 7 Orificios;Invima:2025DM-0031031
+187175-CMT;2.0-Mini Placa Tridimensional de Condilo Mandibular 5 Orificios;Invima:2025DM-0031031
+187174-RAIT;2.0-Mini Placa Retromolar Alveolar 4 Orificios Izquierda ;Invima:2025DM-0031031
+;;Invima:2025DM-0031031
+187174-RADT;2.0-Mini Placa Retromolar Alveolar 4 Orificios Derecha;Invima:2025DM-0031031
+187171-NST;2.0-Mini Placa Nasal;Invima:2025DM-0031031
+187176-LOANST;2.0-Placa en L  6 Orifi 22mm -S  Doble cara  Oblicua Anatomica;Invima:2025DM-0031031
+187176-L110NST;2.0-Placa en L  6 Orifi 28mm -S Doble cara 110§;Invima:2025DM-0031031
+187176-L110NLT;2.0-Placa en L  6 Orifi 36mm -L Doble cara  110§;Invima:2025DM-0031031
+187177-L110NST;2.0-Placa en L  7 Orifi 28mm -S una cara 110§;Invima:2025DM-0031031
+187174-ZP6T;Placa en Z  de 4 Orificios puente corto ;Invima:2025DM-0031031
+187174-ZP12T;Placa en Z  de 4 Orificios puente largo ;Invima:2025DM-0031031
+2207205-T;2.0-Mini Tornillo Cortical Cross de 5mm;Invima:2025DM-0031031
+2207207-T;2.0-Mini Tornillo Cortical Cross de 7mm;Invima:2025DM-0031031
+2207209-T;2.0-Mini Tornillo Cortical Cross de 9mm;Invima:2025DM-0031031
+22072011-T;2.0-Mini Tornillo Cortical Cross de 11mm;Invima:2025DM-0031031
+22072013-T;2.0-Mini Tornillo Cortical Cross de 13mm;Invima:2025DM-0031031
+22072015-T;2.0-Mini Tornillo Cortical Cross de 15mm;Invima:2025DM-0031031
+22072018-T;2.0-Mini Tornillo Cortical Cross de 18mm;Invima:2025DM-0031031
+22072020-T;2.0-Mini Tornillo Cortical Cross de 20mm;Invima:2025DM-0031031
+22072022-T;2.0-Mini Tornillo Cortical Cross de 22mm;Invima:2025DM-0031031
+22072024-T;2.0-Mini Tornillo Cortical Cross de 24mm;Invima:2025DM-0031031
+2207235-ET;2.3-Mini Tornillo Cortical Cross de Emergencia de 5mm;Invima:2025DM-0031031
+2207237-ET;2.3-Mini Tornillo Cortical Cross de Emergencia de 7mm;Invima:2025DM-0031031
+2207239-ET;2.3-Mini Tornillo Cortical Cross de Emergencia de 9mm;Invima:2025DM-0031031
+22072311-ET;2.3-Mini Tornillo Cortical Cross de Emergencia de 11mm;Invima:2025DM-0031031
+2207205-APT;2.0-Mini Tornillo Cortical Cross Auoperforante de 5mm;Invima:2025DM-0031031
+2207207-APT;2.0-Mini Tornillo Cortical Cross Auoperforante de 7mm;Invima:2025DM-0031031
+2207209-APT;2.0-Mini Tornillo Cortical Cross Auoperforante de 9mm;Invima:2025DM-0031031
+22072011-APT;2.0-Mini Tornillo Cortical Cross Auoperforante de 11mm;Invima:2025DM-0031031
+2307206-IMFT;2.0-Tornillo IMF de 6mm;Invima:2025DM-0031031
+2307207-IMFT;2.0-Tornillo IMF de 7mm;Invima:2025DM-0031031
+2307208-IMFT;2.0-Tornillo IMF de 8mm;Invima:2025DM-0031031
+2307209-IMFT;2.0-Tornillo IMF de 9mm;Invima:2025DM-0031031
+23072012-IMFT;2.0-Tornillo IMF de 12mm;Invima:2025DM-0031031
+187244-RT;2.4-Placa Recta 4 Orificios  s/p;Invima:2025DM-0031031
+187246-RT;2.4-Placa Recta 6 Orificios  s/p;Invima:2025DM-0031031
+187248-RT;2.4-Placa Recta 8 Orificios s/p;Invima:2025DM-0031031
+1872412-RT;2.4-Placa Recta 12 Orificios  s/p (Dorada);Invima:2025DM-0031031
+1872416-RT;2.4-Placa Recta 16 Orificios  s/p;Invima:2025DM-0031031
+187244-RPMT;2.4-Placa Recta 4 Orificios Con Puente Medio;Invima:2025DM-0031031
+187246-RPMT;2.4-Placa Recta 6 Orificios Con Puente Medio;Invima:2025DM-0031031
+187246-RPMT;2.4-Placa Recta 6 Orificios Con Puente Medio (dorada);Invima:2025DM-0031031
+187244-CPT;2.4-Placa Curva 4 Orificios Con Puente ;Invima:2025DM-0031031
+187246-CPT;2.4-Placa Curva 6 Orificios Con Puente ;Invima:2025DM-0031031
+187244-OIPT;2.4-Placa Oblicua 4 Orificios Con Puente -IZQ;Invima:2025DM-0031031
+187244-ODPT;2.4-Placa Oblicua 4 Orificios Con Puente -DER;Invima:2025DM-0031031
+187246-OIPT;2.4-Placa Oblicua 6 Orificios Con Puente IZQ;Invima:2025DM-0031031
+187246-ODPT;2.4-Placa Oblicua 6 Orificios Con Puente DER;Invima:2025DM-0031031
+187186-RT;2.4-Placa Recta Bloqueada 6 Orificios  s/p;Invima:2025DM-0031031
+187188-RT;2.4-Placa Recta Bloqueada 8 Orificios  s/p;Invima:2025DM-0031031
+1871812-RT;2.4-Placa Recta Bloqueada 12 Orificios  s/p;Invima:2025DM-0031031
+1871816-RT;2.4-Placa Recta Bloqueada 16 Orificios  s/p;Invima:2025DM-0031031
+187184-RPT;2.4-Placa Recta Bloqueada 4 Orificios  Con Puente;Invima:2025DM-0031031
+187186-RPT;2.4-Placa Recta Bloqueada 6 Orificios  Con Puente;Invima:2025DM-0031031
+187184-C110PT;2.4-Placa curva Bloqueada 4 Orificios  Con Puente 110§;Invima:2025DM-0031031
+187186-C110PT;2.4-Placa curva Bloqueada 6 Orificios  Con Puente 110§;Invima:2025DM-0031031
+187186-C120PT;2.4-Placa curva Bloqueada 6 Orificios  Con Puente 120§;Invima:2025DM-0031031
+187188-C120PT;2.4-Placa curva Bloqueada 8 Orificios  Con Puente 120§;Invima:2025DM-0031031
+;;Invima:2025DM-0031031
+23087205-T;2.0-Tornillo de Bloqueo Cross 5mm;Invima:2025DM-0031031
+23087207-T;2.0-Tornillo de Bloqueo Crfoss 7mm;Invima:2025DM-0031031
+23087209-T;2.0-Tornillo de Bloqueo Cross 9mm;Invima:2025DM-0031031
+230872011-T;2.0-Tornillo de Bloqueo Cross 11mm;Invima:2025DM-0031031
+23087248-T;2.4-Tornillo de Bloqueo Cross 8mm;Invima:2025DM-0031031
+230872410-T;2.4-Tornillo de Bloqueo Cross 10mm;Invima:2025DM-0031031
+230872412-T;2.4-Tornillo de Bloqueo Cross 12mm;Invima:2025DM-0031031
+230872414-T;2.4-Tornillo de Bloqueo Cross 14mm;Invima:2025DM-0031031
+22087248-T;2.4-Tornillo Cortical Cross de 8mm;Invima:2025DM-0031031
+220872410-T;2.4-Tornillo Cortical Cross de 10mm;Invima:2025DM-0031031
+220872412-T;2.4-Tornillo Cortical Cross de 12mm;Invima:2025DM-0031031
+220872414-T;2.4-Tornillo Cortical Cross de 14mm;Invima:2025DM-0031031
+220872416-T;2.4-Tornillo Cortical Cross de 16mm;Invima:2025DM-0031031
+220872418-T;2.4-Tornillo Cortical Cross de 18mm;Invima:2025DM-0031031
+220872420-T;2.4-Tornillo Cortical Cross de 20mm;Invima:2025DM-0031031
+220872422-T;2.4-Tornillo Cortical Cross de 22mm;Invima:2025DM-0031031
+220872424-T;2.4-Tornillo Cortical Cross de 24mm;Invima:2025DM-0031031
+22087278-T;2.7-Tornillo Cortical Cross de 8mm;Invima:2025DM-0031031
+220872710-T;2.7-Tornillo Cortical Cross de 10mm;Invima:2025DM-0031031
+220872712-T;2.7-Tornillo Cortical Cross de 12mm;Invima:2025DM-0031031
+220872714-T;2.7-Tornillo Cortical Cross de 14mm;Invima:2025DM-0031031
+220872716-T;2.7-Tornillo Cortical Cross de 16mm;Invima:2025DM-0031031
+22087278-T;2.7-Tornillo Cortical Cross de 8mm;Invima:2025DM-0031031
+220872710-T;2.7-Tornillo Cortical Cross de 10mm;Invima:2025DM-0031031
+220872712-T;2.7-Tornillo Cortical Cross de 12mm;Invima:2025DM-0031031
+220872714-T;2.7-Tornillo Cortical Cross de 14mm;Invima:2025DM-0031031
+220872716-T;2.7-Tornillo Cortical Cross de 16mm;Invima:2025DM-0031031
+220872718-T;2.7-Tornillo Cortical Cross de 18mm;Invima:2025DM-0031031
+220872720-T;2.7-Tornillo Cortical Cross de 20mm;Invima:2025DM-0031031
+220872722-T;2.7-Tornillo Cortical Cross de 22mm;Invima:2025DM-0031031
+22087308-T;3.0-Tornillo Cortical Cross de 8mm;Invima:2025DM-0031031
+22087310-T;3.0-Tornillo Cortical Cross de 10mm;Invima:2025DM-0031031
+22087312-T;3.0-Tornillo Cortical Cross de 12mm;Invima:2025DM-0031031
+22087314-T;3.0-Tornillo Cortical Cross de 14mm;Invima:2025DM-0031031
+187164-RT;1.5-Micro placa Recta 4 orificios S/P M;Invima:2025DM-0031031
+187166-RT;1.5-Micro placa Recta 6 orificios S/P M;Invima:2025DM-0031031
+187168-RT;1.5-Micro placa Recta 8 orificios S/P M;Invima:2025DM-0031031
+1871610-RT;1.5-Micro placa Recta 10 orificios S/P M;Invima:2025DM-0031031
+1871612-RT;1.5-Micro placa Recta 12 orificios S/P M;Invima:2025DM-0031031
+1871614-RT;1.5-Micro placa Recta 14 orificios S/P AM;Invima:2025DM-0031031
+1871616-RT;1.5-Micro placa Recta 16 orificios S/P AM;Invima:2025DM-0031031
+1871622-RT;1.5-Micro placa Recta 22 orificios S/P AM;Invima:2025DM-0031031
+187162-RP6T;1.5-Micro Placa Recta 2 Orificios Puente corto ;Invima:2025DM-0031031
+187162-RP9T;1.5-Micro Placa Recta 2 Orificios Puente Medio ;Invima:2025DM-0031031
+187162-RP12T;1.5-Micro Placa Recta 2 Orificios Puente Lrgo ;Invima:2025DM-0031031
+187164-RP9T;1.5-Micro Placa Recta 4 Orificios Puente Medio -Mor;Invima:2025DM-0031031
+187164-RP12T;1.5-Micro Placa Recta 4 Orificios Puente Largo -PL;Invima:2025DM-0031031
+187166-RP6T;1.5-Micro Placa Recta 6 Orificios Puente corto -PL;Invima:2025DM-0031031
+187166-RP9T;1.5-Micro Placa Recta 6 Orificios Puente Medio -Mor;Invima:2025DM-0031031
+187166-RP12T;1.5-Micro Placa Recta 6 Orificios Puente Largo -PL;Invima:2025DM-0031031
+187166-OT;1.5-Micro placa Orbital 6 orificios M;Invima:2025DM-0031031
+187168-OT;1.5-Micro placa Orbital 8 orificios M;Invima:2025DM-0031031
+1871610-OT;1.5-Micro placa Orbital 10 orificios M;Invima:2025DM-0031031
+187165-YP4T;1.5-Micro placa en Y de 5 orificios Puente Corto;Invima:2025DM-0031031
+187165-YP8T;1.5-Micro placa en Y de 5 orificios Puente Medio;Invima:2025DM-0031031
+187166-YP12T;1.5-Micro placa en Y de 6 orificios Puente largo (Morada);Invima:2025DM-0031031
+187167-YP12T;1.5-Micro placa en Y de 7 orificios Puente largo (Morada);Invima:2025DM-0031031
+187166-XT;1.5-Micro placa Doble Y de 6 orif. Sin puente ;Invima:2025DM-0031031
+187166-XP5T;1.5-Micro placa Doble Y de 6 orif. Puente corto ;Invima:2025DM-0031031
+187166-XP7T;1.5-Micro placa Doble Y de 6 orif. Puente Medio;Invima:2025DM-0031031
+187166-TT;1.5-Miniplaca en  T de 6 Orifcios  s/p;Invima:2025DM-0031031
+187165-TP6T;1.5-Micro placa en T de 5 orificios con Puente corto M;Invima:2025DM-0031031
+187165-TP9T;1.5-Micro placa en T de 5 orificios con Puente Medio;Invima:2025DM-0031031
+187165-TP12T;1.5-Micro placa en T de 5 orificios con Puente Largo;Invima:2025DM-0031031
+187167-TP6T;1.5-Micro placa en T de 7 orificios con Puente corto M;Invima:2025DM-0031031
+187164-LIP5T;1.5-Micro placa en  L 90ø  4 orificios puente corto Izquierda ;Invima:2025DM-0031031
+187164-LDP5T;1.5-Micro placa en  L 90ø  4 orificios puente corto Derecha;Invima:2025DM-0031031
+187164-LIP7T;1.5-Micro placa en  L 90ø  4 orificios puente Medio Izquierda ;Invima:2025DM-0031031
+187164-LDP7T;1.5-Micro placa en  L 90ø  4 orificios puente Medio Derecha;Invima:2025DM-0031031
+187164-LIP12T;1.5-Micro placa en  L 90ø  4 orificios puente largo Izquierda ;Invima:2025DM-0031031
+187164-LDP12T;1.5-Micro placa en  L 90ø  4 orificios puente Largo Derecha;Invima:2025DM-0031031
+187164-LIPC110T;1.5-Micro placa en  L 100ø  4 orificios puente corto Izquierda ;Invima:2025DM-0031031
+187164-LDPC110T;1.5-Micro placa en  L 100ø  4 orificios puente corto Derecha;Invima:2025DM-0031031
+187164-LIPM110T;1.5-Micro placa en  L 100ø  4 orificios puente Medio Izquierda ;Invima:2025DM-0031031
+187164-LDPM110T;1.5-Micro placa en  L 100ø  4 orificios puente Medio Derecha;Invima:2025DM-0031031
+187164-LIPL110T;1.5-Micro placa en  L 100ø  4 orificios puente largo Izquierda ;Invima:2025DM-0031031
+187164-LDPL110T;1.5-Micro placa en  L 100ø  4 orificios puente Largo Derecha;Invima:2025DM-0031031
+187165-LIPM100T;1.5-Micro placa en  L 100ø  5 orificios puente Medio Izquierda ;Invima:2025DM-0031031
+187165-LDPM100T;1.5-Micro placa en  L 100ø 5 orificios puente Medio Derecha;Invima:2025DM-0031031
+187166-LIPC110T;1.5-Micro placa en  L 100ø  6 orificios puente Corto Izquierda ;Invima:2025DM-0031031
+187166-LDPC110T;1.5-Micro placa en  L 100ø 6 orificios puente  Corto Derecha;Invima:2025DM-0031031
+187161-TRT;1.5-Micro placa Trevol x 4 orificios M;Invima:2025DM-0031031
+187164-CUAT;1.5-Micro placa  Cuadrada x 4 orificios M;Invima:2025DM-0031031
+187166-CUAT;1.5-Micro placa  Cuadrada x 6 orificios M;Invima:2025DM-0031031
+187168-CUAT;1.5-Micro placa Cuadrada x 8 orificios M;Invima:2025DM-0031031
+187161-POPT;1.5-Microplaca Piso de orbita peque¤a;Invima:2025DM-0031031
+187161-POMT;1.5-Microplaca Piso de orbita Mediana;Invima:2025DM-0031031
+187161-POGT;1.5-Microplaca Piso de orbita Grande;Invima:2025DM-0031031
+187616-NOE;1.5-Microplaca Piso de orbita NOE;Invima:2025DM-0031031
+187161-FOIT;1.5-Miniplaca Piso de Orbita Anatomica  Izquierda Morada;Invima:2025DM-0031031
+187161-FOIT;1.5-Miniplaca Piso de Orbita Anatomica  Izquierda Azul;Invima:2025DM-0031031
+187161-FODT;1.5-Miniplaca Piso de Orbita Anatomica  Derecha Morada;Invima:2025DM-0031031
+187161-FODT;1.5-Miniplaca Piso de Orbita Anatomica  Derecha Azul;Invima:2025DM-0031031
+187161-M35X25T;Minimalla 35x25mm (perfil 0.1-0.2);Invima:2025DM-0031031
+187161-M70X50T;Minimalla 70x50mm (perfil 0.1-0.2);Invima:2025DM-0031031
+187161-M100X100T;Minimalla de 100 X 100mm (Perfil 0.2/0,6mm);Invima:2025DM-0031031
+187193D-M50X50T;1.5-Minimalla 3D (Dinamicas) de 50 X 50mm (Perfil 0.6mm) M;Invima:2025DM-0031031
+187193D-M100X100T;1.5-Minimalla 3D (Dinamicas) de 100 X 100mm (Perfil 0.6mm) M;Invima:2025DM-0031031
+187191-TPT;Placa de Trepanacion Peque¤a-14mm -Pplateada;Invima:2025DM-0031031
+187191-TMT;Placa de Trepanacion Mediana-17mm -Plateada;Invima:2025DM-0031031
+187191-TGT;Placa de Trepanacion Grande-22mm -Plateada;Invima:2025DM-0031031
+187191-TEGT;Placa de Trepanacion Extragrande-24mm -Plateada;Invima:2025DM-0031031
+187191-TPT;Placa de Trepanacion Peque¤a -DORADA;Invima:2025DM-0031031
+187191-TMT;Placa de Trepanacion Mediana- DORADA;Invima:2025DM-0031031
+187191-TGT;Placa de Trepanacion Grande -DORADA;Invima:2025DM-0031031
+187191-TEGT;Placa de Trepanacion Extra Grande -Dorada;Invima:2025DM-0031031
+;Placa de Trepanacion Drenage Peque¤a -;Invima:2025DM-0031031
+;Placa de Trepanacion Drenage Mediana -;Invima:2025DM-0031031
+187191-TDT;Placa de Trepanacion Drenage Grande (22mm);Invima:2025DM-0031031
+187191-TRET;Placa de Trepanacion rectangular ;Invima:2025DM-0031031
+2207154-T;1.5-Microitornillos Cross de 4mm;Invima:2025DM-0031031
+2207155-T;1.5-Microitornillos Cross de 5mm;Invima:2025DM-0031031
+2207156-T;1.5-Microitornillos Cross de 6mm;Invima:2025DM-0031031
+2207157-T;1.5-Microitornillos Cross de 7mm;Invima:2025DM-0031031
+2207158-T;1.5-Microitornillos Cross de 8mm;Invima:2025DM-0031031
+2207154-ET;1.5-Microtornillos Cross de Emergencia de 4mm;Invima:2025DM-0031031
+2207155-ET;1.5-Microtornillos Cross de Emergencia de 5mm;Invima:2025DM-0031031
+2207184-ET;1.8-Microitornillos Cross de Emergencia 4mm;Invima:2025DM-0031031
+2207186-ET;1.8-Microitornillos Cross de Emergencia 6mm;Invima:2025DM-0031031
+2207154-APT;1.5-Microtornillos Cross Autoperforantes de 4mm;Invima:2025DM-0031031
+2207155-APT;1.5-Microtornillos Cross Autoperforantes de 5mm;Invima:2025DM-0031031
+2207156-APT;1.5-Microtornillos Cross Autoperforantes de 6mm;Invima:2025DM-0031031
+187124-RT;1.2-Microplaca recta de 4 orificios  s/p;Invima:2025DM-0031031
+187126-RT;1.2-Microplaca recta de 6 orificios s/p;Invima:2025DM-0031031
+1871216-RT;1.2-Microplaca recta de 16 orificios s/p (Azul);Invima:2025DM-0031031
+1871218-RT;1.2-Microplaca recta de 18 orificios s/p;Invima:2025DM-0031031
+187124-RPMT;1.2-Microplaca recta de 4 orif. puente Medio;Invima:2025DM-0031031
+187124-RPLT;1.2-Microplaca recta de 4 orif. puente Largo;Invima:2025DM-0031031
+187126-RPCT;1.2-Microplaca recta de 6 orif. puente Corto;Invima:2025DM-0031031
+187126-RPMT;1.2-Microplaca recta de 6 orif. puente Medio;Invima:2025DM-0031031
+187126-RPLT;1.2-Microplaca recta de 6 orif. puente Largo;Invima:2025DM-0031031
+187129-OT;1.2 Microplaca Curva  orbital de 9 orificios;Invima:2025DM-0031031
+187126-YPCT;1.2-Microplaca en Y 5 Orificios Puente Medio;Invima:2025DM-0031031
+187126-XPCT;1.2-Microplaca en Doble  Y de 6 orif. Puente Corto;Invima:2025DM-0031031
+187126-XPLT;1.2-Microplaca en Doble  Y de 6 orif. Puente Largo;Invima:2025DM-0031031
+187126-TPCT;1.2-Microplaca en T de  6 orificios Puente Corto;Invima:2025DM-0031031
+187127-TPCT;1.2-Microplaca en T de 7 orificios Puente Corto;Invima:2025DM-0031031
+187124-CUAT;1.2-Microplaca  cuadrada de 4 orificios ;Invima:2025DM-0031031
+187126-CUAT;1.2-Microplaca cuadrada de 6 orificios;Invima:2025DM-0031031
+187128-CUAT;1.2-Microplaca cuadrada de 8 orificios;Invima:2025DM-0031031
+187124-LIPCT;1.2-Microplaca en L 4  Orif. Izq  Puente Corto;Invima:2025DM-0031031
+187124-LDPCT;1.2-Microplaca en L 4  Orif. Der  Puente Corto;Invima:2025DM-0031031
+187124-LIPMT;1.2-Microplaca en L 4  Orif.  Izq Puente Medio ;Invima:2025DM-0031031
+187124-LDPMT;1.2-Microplaca en L 4  Orif.  Der Puente Medio;Invima:2025DM-0031031
+187124-LIPLT;1.2-Microplaca en L 4  Orif.  Izq Puente Largo;Invima:2025DM-0031031
+187124-LDPLT;1.2-Microplaca en L 4  Orif.  Der Puente Largo;Invima:2025DM-0031031
+2207123-T;1.2-Microtornillos Cross de 3mm;Invima:2025DM-0031031
+2207124-T;1.2-Microtornillos Cross de 4mm;Invima:2025DM-0031031
+2207125-T;1.2-Microtornillos Cross de 5mm;Invima:2025DM-0031031
+2207126-T;1.2-Microtornillos Cross de 6mm;Invima:2025DM-0031031
+2207123-APT;1.2-Microtornillos Cross Autoperforantes de 3mm;Invima:2025DM-0031031
+2207124-APT;1.2-Microtornillos Cross Autoperforantes de 4mm;Invima:2025DM-0031031
+2207125-APT;1.2-Microtornillos Cross Autoperforantes de 5mm;Invima:2025DM-0031031
+2207126-APT;1.2-Microtornillos Cross Autoperforantes de 6mm;Invima:2025DM-0031031
+IM-CR-PEEK-S;IMPLANTE CRANEAL EN PEEK TALLA S;Invima:2019002564
+IM-CR-PEEK-M;IMPLANTE CRANEAL EN PEEK TALLA M;Invima:2019002564
+IM-CR-PEEK-L;IMPLANTE CRANEAL EN PEEK TALLA L;Invima:2019002564
+IM-CR-PEEK+CFR-L;IMPLANTE CRANEAL EN PEEK CON FC TALLA L;Invima:2019002564
+IM-CR-PEEK-2;IMPLANTE CRANEAL DOS LATERALIDADES PEEK;Invima:2019002564
+IM-01-PMMA+HA;IMPLANTE CRANEAL EN PMMA HIDROXIAPATITA S-M-L;Invima:2019002564
+IM-01-PMMA.;IMPLANTE CRANEAL EN PMMA S-M-L;Invima:2019002564
+IM-CR-PEEK+HA;IMPLANTE CRANEAL EN PEEK+HA S-M-L;Invima:2019002564
+IM-CR-PEEK+CF;IMPLANTE CRANEAL EN PEEK+CF S-M-L;Invima:2019002564
+IM-FC-PMMA-L1;IMPLANTE FACIAL UNA LATERALIDADES PMMA;Invima:2019002564
+IM-FC-PMMA-L2;IMPLANTE FACIAL DOS LATERALIDADES PMMA;Invima:2019002564
+IM-FC-PMMA+HA-L1;IMPLANTE FACIAL UNA LATERALIDADES PMMA+ HA;Invima:2019002564
+IM-FC-PMMA+HA-L2;IMPLANTE FACIAL DOS LATERALIDADES PMMA+ HA;Invima:2019002564
+IM-FC-PEEK-L1;IMPLANTE FACIAL UNA LATERALIDADE PEEK;Invima:2019002564
+IM-FC-PEEK-L2;IMPLANTE FACIAL DOS LATERALIDADES PEEK;Invima:2019002564
+IM-FC-PEEK+HA-L1;IMPLANTE FACIAL UNA LATERALIDADES PEEK+HA;Invima:2019002564
+IM-CR-PEEK-SP;MPLANTE CRANEAL EN PEEK ESPECIAL;Invima:2019002564
+IM-01-PMMA + IM-CR-PEEK-1L;IMPLANTE CRANEAL EN PMMA+ IMPLANTE FACIAL DE UNA LATERALIDAD EN PEEK;Invima:2019002564
+IM-FC-PEEK+HA-L2;IMPLANTE FACIAL DOS LATERALIDADES PEEK+HA;Invima:2019002564
+IM-FC-PEEK+CF-L1;IMPLANTE FACIAL UNA LATERALIDADES PEEK+CF;Invima:2019002564
+IM-FC-PEEK+CF -L2;IMPLANTE FACIAL DOS LATERALIDADES PEEK+CF;Invima:2019002564
+IM-FC-PEEK-L2 + 1L;IMPLANTE FACIAL DE 3 LATERALIDADES;Invima:2019002564
